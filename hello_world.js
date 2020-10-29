@@ -62,7 +62,7 @@ looker.plugins.visualizations.add({
     // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
     var html = "";
-    
+        
     for(var row of data) {
       var cell = row[queryResponse.fields.dimensions[0].name];
       html += LookerCharts.Utils.htmlForCell(cell);
@@ -72,10 +72,16 @@ looker.plugins.visualizations.add({
 
 
     // Set the size to the user-selected size
+    // if (config.font_size == "small") {
+    //   this._textElement.className = "hello-world-text-small";
+    // } else {
+    //   this._textElement.className = "hello-world-text-large";
+    // }
+
     if (config.font_size == "small") {
-      this._textElement.className = "hello-world-text-small";
+      this.element.className = "hello-world-text-small";
     } else {
-      this._textElement.className = "hello-world-text-large";
+      this.element.className = "hello-world-text-large";
     }
 
     // We are done rendering! Let Looker know.
