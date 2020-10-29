@@ -68,7 +68,7 @@ looker.plugins.visualizations.add({
       var cell = row[queryResponse.fields.dimensions[0].name];
       html += LookerCharts.Utils.htmlForCell(cell);
     }
-    this._textElement = html;
+    this._textElement.innerHTML = html;
 
 
     // Set the size to the user-selected size
