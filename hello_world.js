@@ -24,6 +24,7 @@ looker.plugins.visualizations.add({
           flex-direction: column;
           justify-content: center;
           text-align: center;
+          font-family: Impact,Charcoal;
         }
         .hello-world-text-large {
           font-size: 72px;
@@ -33,6 +34,7 @@ looker.plugins.visualizations.add({
         }
       </style>
     `;
+    element.innerHTML += "<h1>Ready to render!</h1>";
 
     // Create a container element to let us center the text.
     var container = element.appendChild(document.createElement("div"));
