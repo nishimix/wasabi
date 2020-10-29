@@ -63,10 +63,11 @@ looker.plugins.visualizations.add({
     // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
 
-    var html = "<br>";     
+    var html = "";     
     for(var row of data) {
       var cell = row[queryResponse.fields.dimensions[0].name];
       html += LookerCharts.Utils.htmlForCell(cell);
+      html += "<br />";
     }
     this._textElement.innerHTML = html;
 
