@@ -1,4 +1,16 @@
 looker.plugins.visualizations.add({
+  options: {
+    font_size: {
+      type: "string",
+      label: "Font Size",
+      values: [
+        {"Large": "large"},
+        {"Small": "small"}
+      ],
+      display: "radio",
+      default: "large"
+    }
+  },
   // Set up the initial state of the visualization
   create: function(element, config) {
 
@@ -50,18 +62,11 @@ looker.plugins.visualizations.add({
     // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
     var html = "";
-    var html_table_start = "<table>";
-    var html_table_end = "</table>";
-    var html_start = "<tr><td>";
-    var html_end= "</td></tr>";
-    html += html_table_start;
+    
     for(var row of data) {
       var cell = row[queryResponse.fields.dimensions[0].name];
-      html += html_start;
       html += LookerCharts.Utils.htmlForCell(cell);
-      html += html_end;
     }
-    html += html_table_end;
     element.innerHTML = html;
     doneRendering()
 
