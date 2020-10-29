@@ -74,12 +74,6 @@ looker.plugins.visualizations.add({
     // Create an element to contain the text.
     this._textElement = container.appendChild(document.createElement("div"));
 
-
-    var vis = this;
-    $(element).find(".show-all").click(function(){
-      vis.trigger("limit", [500]);
-    });
-
   },
   // Render in response to the data or settings changing
   updateAsync: function(data, element, config, queryResponse, details, done) {
@@ -96,6 +90,13 @@ looker.plugins.visualizations.add({
     // Grab the first cell of the data
     var firstRow = data[0];
     var firstCell = firstRow[queryResponse.fields.dimensions[0].name];
+
+
+
+    var vis = this;
+    $(element).find(".show-all").click(function(){
+      vis.trigger("limit", [10]);
+    });
 
 
     // Insert the data into the page
