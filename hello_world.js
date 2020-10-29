@@ -8,7 +8,7 @@ looker.plugins.visualizations.add({
         {"Small": "small"}
       ],
       display: "radio",
-      default: "large"
+      default: "small"
     },
     color_range: {
       type: "array",
@@ -51,7 +51,7 @@ looker.plugins.visualizations.add({
           font-size: 72px;
         }
         .hello-world-text-small {
-          font-size: 18px;
+          font-size: 12px;
         }
       </style>
     `;
