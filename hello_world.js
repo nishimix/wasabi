@@ -10,6 +10,16 @@ looker.plugins.visualizations.add({
       display: "radio",
       default: "large"
     },
+    limit: {
+      type: "string",
+      label: "data limit",
+      values: [
+        {"show-all": "show-all"},
+        {"show-less": "show-less"}
+      ],
+      display: "radio",
+      default: "show-less"
+    },
     color_range: {
       type: "array",
       label: "Color Range",
@@ -63,6 +73,12 @@ looker.plugins.visualizations.add({
 
     // Create an element to contain the text.
     this._textElement = container.appendChild(document.createElement("div"));
+
+
+    var vis = this;
+    $(element).find(".show-all").click(function(){
+      vis.trigger("limit", [500]);
+    });
 
   },
   // Render in response to the data or settings changing
