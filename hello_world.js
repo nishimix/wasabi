@@ -10,16 +10,6 @@ looker.plugins.visualizations.add({
       display: "radio",
       default: "large"
     },
-    // limit: {
-    //   type: "string",
-    //   label: "data limit",
-    //   values: [
-    //     {"show-all": "show-all"},
-    //     {"show-less": "show-less"}
-    //   ],
-    //   display: "radio",
-    //   default: "show-less"
-    // },
     color_range: {
       type: "array",
       label: "Color Range",
@@ -104,6 +94,7 @@ looker.plugins.visualizations.add({
     }
     this._textElement.innerHTML = html;
 
+    console.log(queryResponse)
 
     // Set the size to the user-selected size
     if (config.font_size == "small") {
@@ -111,13 +102,6 @@ looker.plugins.visualizations.add({
     } else {
       this._textElement.className = "hello-world-text-large";
     }
-
-
-    // $(element).find(".show-all").click(function(){
-    //   this.trigger("limit", [10]);
-    // });
-
-
 
     // We are done rendering! Let Looker know.
     done()
