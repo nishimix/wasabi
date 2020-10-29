@@ -91,12 +91,6 @@ looker.plugins.visualizations.add({
     var firstRow = data[0];
     var firstCell = firstRow[queryResponse.fields.dimensions[0].name];
 
-
-    $(element).find(".show-all").click(function(){
-      this.trigger("limit", [10]);
-    });
-
-
     // Insert the data into the page
     // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
@@ -116,6 +110,11 @@ looker.plugins.visualizations.add({
     } else {
       this._textElement.className = "hello-world-text-large";
     }
+
+
+    // $(element).find(".show-all").click(function(){
+    //   this.trigger("limit", [10]);
+    // });
 
 
 
