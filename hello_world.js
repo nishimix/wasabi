@@ -58,17 +58,17 @@ looker.plugins.visualizations.add({
     var firstRow = data[0];
     var firstCell = firstRow[queryResponse.fields.dimensions[0].name];
 
-    // Insert the data into the page
-    this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
-    // var html = "";
-        
-    // for(var row of data) {
-    //   var cell = row[queryResponse.fields.dimensions[0].name];
-    //   html += LookerCharts.Utils.htmlForCell(cell);
-    // }
-    // element.innerHTML = html;
-    // doneRendering()
+    // Insert the data into the page
+    // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
+
+
+    var html = "<br>";     
+    for(var row of data) {
+      var cell = row[queryResponse.fields.dimensions[0].name];
+      html += LookerCharts.Utils.htmlForCell(cell);
+    }
+    this._textElement = html;
 
 
     // Set the size to the user-selected size
