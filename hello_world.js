@@ -55,7 +55,7 @@ looker.plugins.visualizations.add({
         }
       </style>
     `;
-    element.innerHTML += "<h1>Ready to render!</h1>";
+    element.innerHTML += "<h3>CustomVis</h1>";
 
     // Create a container element to let us center the text.
     var container = element.appendChild(document.createElement("div"));
@@ -85,11 +85,15 @@ looker.plugins.visualizations.add({
     // Insert the data into the page
     // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
-
     var html = "";     
     for(var row of data) {
       var cell = row[queryResponse.fields.dimensions[0].name];
-      html += LookerCharts.Utils.htmlForCell(cell);
+      var vv = LookerCharts.Utils.htmlForCell(cell);
+      html += "<a href='https://saleseng.dev.looker.com/dashboards-next/1251?User+ID=";
+      html += vv;
+      html += "'>";
+      html += vv;
+      html += "</a>";
       html += "<br />";
     }
     this._textElement.innerHTML = html;
