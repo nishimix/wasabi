@@ -50,10 +50,10 @@ looker.plugins.visualizations.add({
     // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
     var html = "";
-    var html_table_start = "<table><tr>";
-    var html_table_end = "</tr></table>";
-    var html_start = "<td>";
-    var html_end= "</td>";
+    var html_table_start = "<table>";
+    var html_table_end = "</table>";
+    var html_start = "<tr><td>";
+    var html_end= "</td></tr>";
     html += html_table_start;
     for(var row of data) {
       var cell = row[queryResponse.fields.dimensions[0].name];
