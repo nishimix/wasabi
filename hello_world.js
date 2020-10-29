@@ -55,7 +55,7 @@ looker.plugins.visualizations.add({
         }
       </style>
     `;
-    element.innerHTML += "<h3>CustomVis</h1>";
+    element.innerHTML += "<h3>カスタムビズ</h1>";
 
     // Create a container element to let us center the text.
     var container = element.appendChild(document.createElement("div"));
@@ -86,7 +86,7 @@ looker.plugins.visualizations.add({
     // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
     var html = "";
-    html +="<a href='https://saleseng.dev.looker.com/dashboards-next/1251?User+ID=' target='_blank'>ここにDashboardの検索条件が埋め込めれば</a><br />";
+    html +="<a href='https://saleseng.dev.looker.com/dashboards-next/1251?User+ID=' target='_blank'>ここにDashboardの検索条件パラメータ付きリンクが埋め込めれば</a><br />";
 
     for(var row of data) {
       var cell = row[queryResponse.fields.dimensions[0].name];
