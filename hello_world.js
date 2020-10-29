@@ -92,10 +92,8 @@ looker.plugins.visualizations.add({
     var firstCell = firstRow[queryResponse.fields.dimensions[0].name];
 
 
-
-    var vis = this;
     $(element).find(".show-all").click(function(){
-      vis.trigger("limit", [10]);
+      this.trigger("limit", [10]);
     });
 
 
