@@ -54,35 +54,31 @@ looker.plugins.visualizations.add({
       return;
     }
 
-    // // Grab the first cell of the data
-    // var firstRow = data[0];
-    // var firstCell = firstRow[queryResponse.fields.dimensions[0].name];
+    // Grab the first cell of the data
+    var firstRow = data[0];
+    var firstCell = firstRow[queryResponse.fields.dimensions[0].name];
 
-    // // Insert the data into the page
-    // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
+    // Insert the data into the page
+    this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
-    var html = "";
+    // var html = "";
         
-    for(var row of data) {
-      var cell = row[queryResponse.fields.dimensions[0].name];
-      html += LookerCharts.Utils.htmlForCell(cell);
-    }
-    element.innerHTML = html;
+    // for(var row of data) {
+    //   var cell = row[queryResponse.fields.dimensions[0].name];
+    //   html += LookerCharts.Utils.htmlForCell(cell);
+    // }
+    // element.innerHTML = html;
     // doneRendering()
 
 
     // Set the size to the user-selected size
-    // if (config.font_size == "small") {
-    //   this._textElement.className = "hello-world-text-small";
-    // } else {
-    //   this._textElement.className = "hello-world-text-large";
-    // }
-
     if (config.font_size == "small") {
-      this.element.className = "hello-world-text-small";
+      this._textElement.className = "hello-world-text-small";
     } else {
-      this.element.className = "hello-world-text-large";
+      this._textElement.className = "hello-world-text-large";
     }
+
+
 
     // We are done rendering! Let Looker know.
     done()
