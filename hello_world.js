@@ -86,7 +86,7 @@ looker.plugins.visualizations.add({
     // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
     var html = "";
-    html +="<a href='https://saleseng.dev.looker.com/dashboards-next/1251?User+ID=' target="_blank">ここにDashboardの検索条件が埋め込めれば</a><br />";
+    html +="<a href='https://saleseng.dev.looker.com/dashboards-next/1251?User+ID=' target='_blank'>ここにDashboardの検索条件が埋め込めれば</a><br />";
 
     for(var row of data) {
       var cell = row[queryResponse.fields.dimensions[0].name];
