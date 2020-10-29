@@ -89,12 +89,7 @@ looker.plugins.visualizations.add({
     for(var row of data) {
       var cell = row[queryResponse.fields.dimensions[0].name];
       var vv = LookerCharts.Utils.htmlForCell(cell);
-      html += "<a href='https://saleseng.dev.looker.com/dashboards-next/1251?User+ID=";
-      html += vv;
-      html += "'>";
-      html += vv;
-      html += "</a>";
-      html += "<br />";
+      html += "<a href='https://saleseng.dev.looker.com/dashboards-next/1251?User+ID=" + vv + "'>" + vv + "</a><br />" ;
     }
     this._textElement.innerHTML = html;
 
