@@ -45,7 +45,7 @@ looker.plugins.visualizations.add({
           flex-direction: column;
           justify-content: center;
           text-align: center;
-          font-family: Impact,Charcoal;
+          font-family: Helvetica Neue;
         }
         .hello-world-text-large {
           font-size: 72px;
@@ -86,8 +86,8 @@ looker.plugins.visualizations.add({
     // this._textElement.innerHTML = LookerCharts.Utils.htmlForCell(firstCell);
 
     var html = "";
-    html +="<a href='https://saleseng.dev.looker.com/dashboards-next/1251?User+ID='>ここにDashboardの検索条件が埋め込めれば</a>";
-    
+    html +="<a href='https://saleseng.dev.looker.com/dashboards-next/1251?User+ID=' target="_blank">ここにDashboardの検索条件が埋め込めれば</a><br />";
+
     for(var row of data) {
       var cell = row[queryResponse.fields.dimensions[0].name];
       html += LookerCharts.Utils.htmlForCell(cell);
