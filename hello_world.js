@@ -10,16 +10,16 @@ looker.plugins.visualizations.add({
       display: "radio",
       default: "large"
     },
-    limit: {
-      type: "string",
-      label: "data limit",
-      values: [
-        {"show-all": "show-all"},
-        {"show-less": "show-less"}
-      ],
-      display: "radio",
-      default: "show-less"
-    },
+    // limit: {
+    //   type: "string",
+    //   label: "data limit",
+    //   values: [
+    //     {"show-all": "show-all"},
+    //     {"show-less": "show-less"}
+    //   ],
+    //   display: "radio",
+    //   default: "show-less"
+    // },
     color_range: {
       type: "array",
       label: "Color Range",
@@ -86,6 +86,7 @@ looker.plugins.visualizations.add({
       this.addError({title: "No Dimensions", message: "This chart requires dimensions."});
       return;
     }
+    
 
     // Grab the first cell of the data
     var firstRow = data[0];
