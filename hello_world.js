@@ -68,7 +68,7 @@ looker.plugins.visualizations.add({
       html += LookerCharts.Utils.htmlForCell(cell);
     }
     element.innerHTML = html;
-    doneRendering()
+    // doneRendering()
 
 
     // Set the size to the user-selected size
@@ -79,6 +79,6 @@ looker.plugins.visualizations.add({
     }
 
     // We are done rendering! Let Looker know.
-    // done()
+    done()
   }
 });
