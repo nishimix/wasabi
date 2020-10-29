@@ -9,6 +9,27 @@ looker.plugins.visualizations.add({
       ],
       display: "radio",
       default: "large"
+    },
+    color_range: {
+      type: "array",
+      label: "Color Range",
+      display: "colors"
+    },
+   top_label: {
+      type: "string",
+      label: "Label (for top)",
+      placeholder: "My Great Chart"
+    },
+    transport_mode: {
+      type: "string",
+      label: "Mode of Transport",
+      display: "select",
+      values: [
+      	 {"Airplane": "airplane"},
+      	 {"Car": "car"},
+      	 {"Unicycle": "unicycle"}
+      ],
+      default: "unicycle"
     }
   },
   // Set up the initial state of the visualization
